@@ -7,16 +7,15 @@ const Hero = () => {
   // const video=
   return (
     // <Box >
-<div className='main'>
+<Box>
         {/* <div className="overlay"></div> */}
         <video src={video} autoPlay loop muted />
         <div className="content">
 
-
             <Heading>Welcome</Heading>
             <Heading>To CricLive</Heading>
         </div>
-    </div>
+    </Box>
     // </Box>
   );
 };

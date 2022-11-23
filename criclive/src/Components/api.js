@@ -1,4 +1,4 @@
-// const API_KEY = "246b1211-168b-465b-a8ab-5a62fc64ca18";
+const API_KEY = "246b1211-168b-465b-a8ab-5a62fc64ca18";
 
 export const getMatches = () => {
   const url = `https://api.cricapi.com/v1/matches?apikey=${API_KEY}&offset=0`;
