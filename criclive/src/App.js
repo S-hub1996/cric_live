@@ -2,18 +2,16 @@
 import BgHero from "./Components/BgHero";
 import Cards from "./Components/Card";
 import Footer from "./Components/Footer";
-import Hero from "./Components/Hero";
-import Matches from "./Components/Matches";
+import MainRoute from "./Components/MainRoute";
+
 import Nav from "./Components/Navbar";
 
 function App() {
   return (
     <div>
 <Nav/>
-<Hero/>
-{/* <BgHero/> */}
-<Matches/>
 
+<MainRoute/>
 <Footer/>
 
     </div>

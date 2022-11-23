@@ -20,3 +20,4 @@ export const getMatchDetail = (id) => {
     .then((response) => response.json())
     .catch((error) => console.log(error));
 };
+
