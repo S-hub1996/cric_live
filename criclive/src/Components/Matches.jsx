@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react';
 import { SimpleGrid } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import { getMatches } from './api'
+import Cards from './Card';
 const Matches = () => {
     const [matches, setMatches] = useState([]);
 
@@ -18,10 +19,7 @@ console.log(matches)
   return (
     <SimpleGrid columns={[1, 2, 3]}>
         {matches?.map((match) =>{
-           return <Box m={2}>
-                {match.name}
-
-            </Box>
+           return <Cards match={match}/>
         })}
     </SimpleGrid>
   )

@@ -1,4 +1,6 @@
+
 import BgHero from "./Components/BgHero";
+import Cards from "./Components/Card";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Matches from "./Components/Matches";
@@ -11,7 +13,9 @@ function App() {
 <Hero/>
 {/* <BgHero/> */}
 <Matches/>
+
 <Footer/>
+
     </div>
   );
 }
