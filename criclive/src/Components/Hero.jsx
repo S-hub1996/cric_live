@@ -1,19 +1,24 @@
-import { Box } from '@chakra-ui/react'
-import React from 'react'
-
+import { Box } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
+import React from "react";
+import video from '../Assets/heroVideo.mp4'
+import './hero.css'
 const Hero = () => {
+  // const video=
   return (
-          <Box>
-        
-       <AspectRatio maxW='560px' ratio={1}>
-  <iframe
-     title='naruto'
-    src='https://www.youtube.com/embed/QhBnZ6NPOY0'
-    allowFullScreen
-  />
-</AspectRatio>
-          </Box>
-  )
-}
+    // <Box >
+<div className='main'>
+        {/* <div className="overlay"></div> */}
+        <video src={video} autoPlay loop muted />
+        <div className="content">
 
-export default Hero
+
+            <Heading>Welcome</Heading>
+            <Heading>To CricLive</Heading>
+        </div>
+    </div>
+    // </Box>
+  );
+};
+
+export default Hero;
