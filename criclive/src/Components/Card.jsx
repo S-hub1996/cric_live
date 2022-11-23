@@ -39,7 +39,7 @@ export default function Cards({match}) {
             css={{
               border: '2px solid white',
             }}
-          />
+          />    
         </Flex>
 
         <Box p={6}>
