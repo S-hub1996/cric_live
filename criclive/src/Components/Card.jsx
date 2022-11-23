@@ -10,14 +10,25 @@ import {
   Button,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
 export default function Cards({match}) {
-  console.log(match)
+    const [teamA,setTeamA]=useState({})
+    const [teamB,setTeamB]=useState({})
+//   console.log(match?.teamInfo)
+useEffect(()=>{
+    if(match?.teamInfo?.length===2){
+        setTeamA(match.teamInfo[0]) 
+        setTeamB(match.teamInfo[1]) 
+      }
+},[])
+
   return (
 
-    <Center py={6}>
+    <Center py={6} >
       <Box
-        maxW={'270px'}
+        maxW={'300px'}
+        h={'600px'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
@@ -26,10 +37,11 @@ export default function Cards({match}) {
         <Image
           h={'120px'}
           w={'full'}
-        //  src={match.teamInfo.0.img}
+         src={teamA.img}
           objectFit={'cover'}
         />
-        <Flex justify={'center'} mt={-12}>
+
+        <Flex justify={'center'} my={-12}>
           <Avatar
             size={'xl'}
             src={
@@ -41,12 +53,21 @@ export default function Cards({match}) {
             }}
           />
         </Flex>
+        
+        <Image
+        
+          h={'120px'}
+          w={'full'}
+          src={teamB.img}
+          objectFit={'cover'}
+        />
 
         <Box p={6}>
           <Stack spacing={0} align={'center'} mb={5}>
             <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'} textAlign='center'>
                {match.name}
             </Heading> 
+            
             <Text color={'gray.500'}>Date:  {match.date}</Text>
             <Text color={'gray.500'}>Match Type : {match.matchType}</Text>
             <Text color={'gray.500'}>Status: {match.status}</Text>
