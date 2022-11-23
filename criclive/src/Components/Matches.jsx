@@ -19,6 +19,7 @@ console.log(matches)
   return (
     <SimpleGrid columns={[1, 2, 3]}>
         {matches?.map((match) =>{
+            if (match.teamInfo)
            return <Cards match={match}/>
         })}
     </SimpleGrid>
