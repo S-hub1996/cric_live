@@ -21,3 +21,9 @@ export const getMatchDetail = (id) => {
     .catch((error) => console.log(error));
 };
 
+export const searchMatch=(input)=>{
+  const url = `https://api.cricapi.com/v1/series?apikey=246b1211-168b-465b-a8ab-5a62fc64ca18&offset=0&search=${input}`;
+  return fetch(url)
+    .then((response) => response.json())
+    .catch((error) => console.log(error));
+} 
