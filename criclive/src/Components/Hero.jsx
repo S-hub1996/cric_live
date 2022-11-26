@@ -10,11 +10,7 @@ const Hero = () => {
 <Box>
         {/* <div className="overlay"></div> */}
         <video src={video} autoPlay loop muted />
-        <div className="content">
-
-            <Heading>Welcome</Heading>
-            <Heading>To CricLive</Heading>
-        </div>
+       <h1 className="content">Welcome to criclive</h1>
     </Box>
     // </Box>
   );

@@ -17,7 +17,7 @@ const Matches = () => {
   
 console.log(matches)
   return (
-    <SimpleGrid columns={[1, 2, 3]}>
+    <SimpleGrid columns={[1, 2, 3,3,5]}>
         {matches?.map((match) =>{
             if (match.teamInfo)
            return <Cards match={match}/>
