@@ -9,8 +9,10 @@ const Hero = () => {
     // <Box >
 <Box>
         {/* <div className="overlay"></div> */}
+        <div className="outer">
         <video src={video} autoPlay loop muted />
-       <h1 className="content">Welcome to criclive</h1>
+              {/* <Heading className="heading">wlcm to criclive</Heading> */}
+              </div>
     </Box>
     // </Box>
   );

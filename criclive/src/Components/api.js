@@ -14,11 +14,22 @@ export const getMatches = () => {
 
 //get the score of the cuurent match
 
-export const getMatchDetail = (id) => {
-  const url = `https://cricapi.com/api/cricketScore?unique_id=${id}&apikey=${API_KEY}`;
-  return fetch(url)
-    .then((response) => response.json())
-    .catch((error) => console.log(error));
+export const getMatchDetail = async (id) => {
+  const url=`https://api.cricapi.com/v1/match_info?apikey=${API_KEY}&id=${id}`;
+  // const url = `https://cricapi.com/api/cricketScore?unique_id=${id}&apikey=${API_KEY}`;
+  let headersList = {
+    "Accept": "*/*",
+    "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+   }
+   
+   let response = await fetch(url, { 
+     method: "GET",
+     headers: headersList
+   });
+   
+   let data = await response.json();
+  //  console.log(data.data);
+   return data.data
 };
 
 export const searchMatch=(input)=>{

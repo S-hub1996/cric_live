@@ -11,20 +11,27 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-
+import { getMatchDetail } from './api';
+import { Link as Rlink } from 'react-router-dom';
 export default function Cards({match}) {
     const [teamA,setTeamA]=useState({})
     const [teamB,setTeamB]=useState({})
+    const [id,setid]=useState("")
 //   console.log(match?.teamInfo)
 useEffect(()=>{
     if(match?.teamInfo?.length===2){
         setTeamA(match.teamInfo[0]) 
-        setTeamB(match.teamInfo[1]) 
+        setTeamB(match.teamInfo[1])
+        setid(match.id) 
       }
 },[])
 
-  return (
 
+
+  return (
+    
+    <>
+  
     <Center py={6} >
       <Box
         maxW={'300px'}
@@ -88,8 +95,10 @@ useEffect(()=>{
               </Text>
             </Stack>
           </Stack>
-
+          <Rlink to={`match/${match.id}`}> 
           <Button
+           onClick={getMatchDetail}
+
             w={'full'}
             mt={8}
             bg={useColorModeValue('#151f21', 'gray.900')}
@@ -101,8 +110,10 @@ useEffect(()=>{
             }}>
              See More
           </Button>
+          </Rlink>
         </Box>
       </Box>
     </Center>
+    </>
   );
 }
