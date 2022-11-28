@@ -34,7 +34,7 @@ useEffect(()=>{
   
     <Center py={6} >
       <Box
-        maxW={'300px'}
+        maxW={'400px'}
         h={'600px'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
@@ -81,26 +81,13 @@ useEffect(()=>{
             <Text color={'gray.500'} textAlign='center'>Venue: {match.venue}</Text>
           </Stack>
 
-          <Stack direction={'row'} justify={'center'} spacing={6}>
-            <Stack spacing={0} align={'center'}>
-              <Text fontWeight={600}>23k</Text>
-              <Text fontSize={'sm'} color={'gray.500'}>
-                Followers
-              </Text>
-            </Stack>
-            <Stack spacing={0} align={'center'}>
-              <Text fontWeight={600}>23k</Text>
-              <Text fontSize={'sm'} color={'gray.500'}>
-                Followers
-              </Text>
-            </Stack>
-          </Stack>
+
           <Rlink to={`match/${match.id}`}> 
           <Button
            onClick={getMatchDetail}
 
             w={'full'}
-            mt={8}
+            
             bg={useColorModeValue('#151f21', 'gray.900')}
             color={'white'}
             rounded={'md'}
