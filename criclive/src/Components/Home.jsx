@@ -7,7 +7,7 @@ const Home = () => {
     <div>
         <Hero/>
 {/* <BgHero/> */}
-<Heading textAlign='center' m='2' fontFamily='sans-serif'>Current Matches</Heading>
+<Heading textAlign='center' m='2' fontFamily='sans-serif'>Recent Matches</Heading>
 <Matches/>
     </div>
   )
