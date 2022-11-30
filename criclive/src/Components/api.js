@@ -38,9 +38,9 @@ export const searchMatch=(input)=>{
     .then((response) => response.json())
     .catch((error) => console.log(error));
 } 
-export const getBBB=(id)=>{
-  const url = `https://api.cricapi.com/v1/match_bbb?apikey=246b1211-168b-465b-a8ab-5a62fc64ca18&id=${id}`;
-  return fetch(url)
-    .then((response) => response.json())
-    .catch((error) => console.log(error));
-} 
+// export const getBBB=(id)=>{
+//   const url = `https://api.cricapi.com/v1/match_scorecard?apikey=246b1211-168b-465b-a8ab-5a62fc64ca18&id=${id}`;
+//   return fetch(url)
+//     .then((response) => response.json())
+//     .catch((error) => console.log(error));
+// } 

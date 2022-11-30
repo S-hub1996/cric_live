@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { getBBB, getMatchDetail } from './api';
+import {  getMatchDetail } from './api';
 import { useParams } from 'react-router-dom';
 import { Heading } from '@chakra-ui/react';
 import SingleCard from './SingleCard';
@@ -19,24 +19,24 @@ const Singledata = () => {
         .catch((error) => {});
 
 
-        getBBB(id)
-        .then((data) => {
-          console.log(data);
-          setBBB(data);
-        })
-      .catch((error) => {});
+      //   getBBB(id)
+      //   .then((data) => {
+      //     console.log(data);
+      //     setBBB(data);
+      //   })
+      // .catch((error) => {});
 
 
       }
 
       console.log(singlematch) 
-      console.log(bbb) 
+      // console.log(bbb) 
       }, [id]);
   return (
     <div>
 
 <SingleCard match={singlematch}/>
-
+{/* <Heading>{singlematch.matchWinner}</Heading> */}
     </div>
   )
 }
