@@ -30,9 +30,9 @@ export default function Carousel() {
 
   // These are the images used in the slide
   const cards = [
+      'https://wallpapercave.com/wp/wp6951336.jpg',
     'https://wallpapercave.com/dwp1x/wp4012104.jpg',
     'https://wallpapercave.com/dwp1x/wp4012130.jpg',
-    'https://wallpapercave.com/dwp1x/wp4012141.jpg',
   ];
 
   return (

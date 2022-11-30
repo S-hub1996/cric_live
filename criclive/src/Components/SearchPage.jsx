@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { searchMatch } from "./api";
 import Cards from "./Card";
 import SearchCard from "./SearchCard";
-import './slide.css'
 import Carousel from "./Slider";
 const SearchPage = () => {
   const [input, setinput] = useState("");

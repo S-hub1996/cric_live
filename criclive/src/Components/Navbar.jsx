@@ -26,7 +26,8 @@ export default function Nav() {
     <>
       <Box zIndex={999} bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Avatar size={"md"} src={ball} />
+        <Rlink to='/'>  <Avatar size={"md"} src={ball} /></Rlink>
+         
              <Flex>
              <Text fontSize={"lg"} fontWeight={"bold"} m={2} p={1}>
              <Rlink to='/'>  CricLive</Rlink>

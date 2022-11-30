@@ -10,7 +10,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { ReactNode } from 'react';
   import ball from "../Assets/ball.jpg";
 
@@ -64,11 +64,11 @@ import {
               </Flex>
             
             <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Twitter'} href={'#'}>
+              <SocialButton label={'Twitter'} href={'https://twitter.com/SrivastavChhavi'}>
                 <FaTwitter />
               </SocialButton>
               <SocialButton label={'YouTube'} href={'#'}>
-                <FaYoutube />
+                <FaLinkedin />
               </SocialButton>
               <SocialButton label={'Instagram'} href={'#'}>
                 <FaInstagram />
